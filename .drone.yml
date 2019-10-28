@@ -3,13 +3,13 @@ name: example-pipeline
 
 steps:
  - name: build
- image: node:latest
- commands:
- - npm install
- - npm run test
- when:
- branch:
- - master
- event:
- - push
- - pull-request
+   image: node:latest
+   commands:
+   - npm install
+   - npm run test
+   when:
+   branch:
+   - master
+   event:
+   - push
+   - pull-request
