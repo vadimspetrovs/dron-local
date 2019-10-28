@@ -1,15 +1,9 @@
 kind: pipeline
-name: example-pipeline
+name: default
 
 steps:
- - name: build
-   image: node:latest
-   commands:
-   - npm install
-   - npm run test
-   when:
-   branch:
-   - master
-   event:
-   - push
-   - pull-request
+- name: frontend
+  image: node
+  commands:
+  - npm ci
+  - npm run test:unit
