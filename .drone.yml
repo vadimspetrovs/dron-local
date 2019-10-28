@@ -1,7 +1,4 @@
 kind: pipeline
-platform:
-  arch: arm
-  os: linux
 name: example-pipeline
 
 steps:
